@@ -54,10 +54,22 @@
 </body>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+<script src="js/arreglo.js"></script>
+<script type="text/javascript">
+    function hola() {
+        var datos =
+            $.ajax({
+                url: 'Controllers/pre-vista.php',
+                datatype: 'text',
+                async: false
+            }).responseText;
 
 
-<script src="js/arreglo.js">
-    //Aqui va lo de javascript o en un nuevo archivo
+        document.getElementById('prevista').innerHTML = datos
+    }
+
+
+    setInterval(hola, 1000);
 </script>
 
 </html>
