@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <title>Document</title>
+</head>
+
+<body class="yellow darken-1">
+    <div class="row">
+        <div class="col s5">
+            <div class="row s5"></div>
+            <div class="row col s12 white">
+                <form class="col s12" action="Controllers/anuncio.php" method="POST" enctype="multipart/form-data">
+                    <div class="row">
+                        <div class="input-field col s12">
+                            <input id="first_name" type="text" name="tittle" class="validate">
+                            <label for="first_name">Titulo</label>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <textarea id="textarea1" name="description" class="materialize-textarea"></textarea>
+                                <label for="textarea1">Descripción</label>
+                            </div>
+                        </div>
+                        <div class="file-field input-field">
+                            <div class="btn">
+                                <span>imagen</span>
+                                <input type="file" name="upfile">
+                            </div>
+                            <div class="file-path-wrapper">
+                                <input class="file-path validate" type="text" placeholder="Upload one or more files">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <button class="btn waves-effect waves-light" type="submit" name="action">Publicar</button>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class=" col s7">
+            <div class="row s5"></div>
+            <div class="col s12 blue-grey">
+                <div id="prevista"></div>
+            </div>
+        </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js "></script>
+
+
+<script src="js/arreglo.js">
+    //Aqui va lo de javascript o en un nuevo archivo
+</script>
+
+</html>
