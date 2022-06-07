@@ -15,7 +15,7 @@ $imagee = "Insert into image(name, type) values ('$image', '$tipo')";
 
 if(mysqli_query($mysql,$message)){
     if(mysqli_query($mysql,$imagee)){
-        echo "";
+        header('Location: ../index.html');
     }
 
 }else{

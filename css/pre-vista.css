@@ -1,0 +1,9 @@
+#scroll {
+    height: 100%;
+    position: relative;
+}
+
+#scroll table {
+    position: relative;
+    border-collapse: collapse;
+}
