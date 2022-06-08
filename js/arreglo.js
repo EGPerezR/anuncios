@@ -8,6 +8,3 @@ function hola() {
 
     document.getElementById('prevista').innerHTML = datos
 }
-
-
-setInterval(hola, 1000);

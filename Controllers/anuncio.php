@@ -10,6 +10,8 @@ $ruta = "../img/";
 
 $id_imagen = 0;
 $id_mensaje = 0;
+
+
 copy($rut, $ruta . $image);
 
 
@@ -33,16 +35,17 @@ if (mysqli_query($mysql, $message)) {
         }
 
         if (mysqli_query($mysql, "INSERT INTO message_image(id_message,id_imagee,visible) values($id_mensaje,$id_imagen,1)")) {
+            header('Location: ../index.php');
 ?>
 
             <script>
-                function load(callback) {
+                /*function load(callback) {
                     alert('Anuncio Subido con exito');
                     callback();
                 }
                 load(function() {
                     window.location.href = "../index.html";
-                })
+                })*/
             </script>
 
         <?php
