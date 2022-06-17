@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.2/examples/carousel/">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+</head>
+
+<body onload="hola()" background="img/3.jpg" no-repeat center top>
+    <br>
+    <br>
+    <br>
+    <div id="slider"></div>
+</body>
+
+</html>
+
+<script src="js/bootstrap.bundle.min.js"></script>
+<script src=" https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js "></script>
+<script>
+    function hola() {
+        var datos = $.ajax({
+            url: 'Controllers/visualizacion.php',
+            datatype: 'text',
+            async: false
+        }).responseText;
+
+
+        document.getElementById('slider').innerHTML = datos
+    }
+    console.log(num)
+        // setInterval(hola, numero())
+</script>
+
+<style>
+    body {
+        overflow-y: hidden;
+    }
+</style>
